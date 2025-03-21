@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import { Geist, Geist_Mono } from "next/font/google";
 import localFont from 'next/font/local';
+import InfiniteScroll from "@/components/InfiniteScroll";
+import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 
 const pallyBold = localFont({
   src: '../public/fonts/Pally-Bold.otf',
@@ -101,7 +103,7 @@ export default function Home() {
       </div>
 
       {/* Content Section (below the hero) */}
-      <section className="relative bg-[#FEF9E1] min-h-screen py-20 px-[240px] mt-400">
+      <section className="relative bg-[#FFF8D2] min-h-screen py-20 px-[240px] mt-400">
         <div className="grid grid-cols-2 gap-16 items-center mt-10">
           {/* Left Column - Text Content */}
           <div className="">
@@ -165,14 +167,22 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-16 bg-[#FEF9E1]">
-        <h2 className="whitespace-nowrap text-6xl font-[family-name:var(--font-pally-bold)] text-[#FF6B6B]">
-          Savory * Satisfying * Vibrant * Cheery * Sunny * Delicious * Friendly * Special * Sweet *
-        </h2>
-      </section>
-
-
-
+      <InfiniteMovingCards 
+        items={[
+          "Savory",
+          "*",
+          "Satisfying",
+          "*",
+          "Vibrant",
+          "*",
+          "Cheery",
+          "*",
+          "Delicious",
+          "*",
+          "Friendly",
+          "*",
+        ]}
+      />
 
       {/* Footer or other sections */}
       <footer className="bg-[#52B4D9] text-white py-10 px-[240px] text-center">
