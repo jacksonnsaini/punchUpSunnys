@@ -138,11 +138,6 @@ export default function Home() {
               </div>
               
               {/* Cloud decoration */}
-              <img 
-                src="/cloud2.svg" 
-                alt="Cloud" 
-                className="absolute top-[-40px] right-[-20px] w-[120px] h-auto"
-              />
             </div>
             
             {/* Small circle with second food image */}
@@ -157,22 +152,28 @@ export default function Home() {
             
             {/* Cloud decoration */}
             <img 
-              src="/cloud1.svg" 
+              src="/cloud3.svg" 
               alt="Cloud" 
-              className="absolute bottom-[100px] left-[-60px] w-[150px] h-auto"
+              className="absolute top-[-20px] right-[-30px] w-[280px] h-auto z-10"
+            />
+            <img 
+              src="/cloud4.svg" 
+              alt="Cloud" 
+              className="absolute bottom-[10px] right-100 w-[280px] h-auto z-10"
             />
           </div>
         </div>
       </section>
-      
-      {/* Additional content can be added here */}
-      <section className="bg-white py-20 px-[240px]">
-        <h2 className="text-4xl font-[family-name:var(--font-pally-bold)] text-[#FF6B6B] mb-8 text-center">
-          Our Signature Dishes
+
+      <section className="py-16 bg-[#FEF9E1]">
+        <h2 className="whitespace-nowrap text-6xl font-[family-name:var(--font-pally-bold)] text-[#FF6B6B]">
+          Savory * Satisfying * Vibrant * Cheery * Sunny * Delicious * Friendly * Special * Sweet *
         </h2>
-        {/* Additional content here */}
       </section>
-      
+
+
+
+
       {/* Footer or other sections */}
       <footer className="bg-[#52B4D9] text-white py-10 px-[240px] text-center">
         <p>© 2025 Sunnys. All rights reserved.</p>
