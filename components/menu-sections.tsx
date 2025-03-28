@@ -19,9 +19,7 @@ const roboto = localFont({
 const MenuSections = () => {
   return (
     <div className={`${pallyBold.variable} ${pallyRegular.variable} ${roboto.variable} flex flex-col w-full`}>
-      {/* Section 1 */}
       <div className="flex flex-row w-full h-screen">
-        {/* Left half – colored text section */}
         <div className="w-1/2 h-full bg-[#FADE50] flex items-center justify-center">
           <div className="p-52 text-left">
             <h2 className="text-4xl font-[family-name:var(--font-pally-bold)] mb-4">
@@ -35,7 +33,6 @@ const MenuSections = () => {
             </button>
           </div>
         </div>
-        {/* Right half – image section */}
         <div className="w-1/2 h-full">
           <img 
             src="/mimosa.jpeg" 
@@ -45,9 +42,7 @@ const MenuSections = () => {
         </div>
       </div>
 
-      {/* Section 2 */}
       <div className="flex flex-row w-full h-screen">
-        {/* Left half – image section */}
         <div className="w-1/2 h-full">
           <img 
             src="/eggCroisant.jpeg" 
@@ -55,7 +50,6 @@ const MenuSections = () => {
             className="w-full h-full object-cover"
           />
         </div>
-        {/* Right half – colored text section */}
         <div className="w-1/2 h-full bg-[#52B4D9] flex items-center justify-center">
         <img src='/cloud3.svg' alt='cloud' className='absolute mb-135 ml-85 w-75 transform scale-x-[-1] z-2' />
             <div
@@ -84,9 +78,7 @@ const MenuSections = () => {
         </div>
       </div>
 
-      {/* Section 3 */}
       <div className="flex flex-row w-full h-screen">
-        {/* Left half – colored text section */}
         <div className="w-1/2 h-full bg-[#EB6862] flex items-center justify-center">
           <div className="p-52 text-left">
             <h2 className="text-4xl font-[family-name:var(--font-pally-bold)] mb-4 text-white">
@@ -100,7 +92,6 @@ const MenuSections = () => {
             </button>
           </div>
         </div>
-        {/* Right half – image section */}
         <div className="w-1/2 h-full">
           <img 
             src="/waffles.jpeg" 
