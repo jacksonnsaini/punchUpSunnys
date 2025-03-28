@@ -33,18 +33,14 @@ export default function Home() {
   useEffect(() => {
     let lastScrollY = window.scrollY;
     const handleScroll = () => {
-      // Update viewport progress
       const viewportHeight = window.innerHeight;
       const currentScroll = window.scrollY;
       const progress = Math.min(currentScroll / viewportHeight, 1);
       setViewportProgress(progress);
       
-      // Determine navbar visibility
       if (currentScroll > lastScrollY && currentScroll > 50) {
-        // scrolling down - hide navbar
         setShowNavbar(false);
       } else {
-        // scrolling up - show navbar
         setShowNavbar(true);
       }
       lastScrollY = currentScroll;
@@ -54,12 +50,9 @@ export default function Home() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Scale sun size based on viewport progress (0-100%)
   const progressPercentage = viewportProgress * 100;
   const sunSize = 130 + progressPercentage * 2;
-  // Initial content fades out by 50% of viewport scroll
   const contentOpacity = Math.max(1 - viewportProgress * 2, 0);
-  // New tagline fades in from 60% to 80% of viewport scroll
   const newTaglineOpacity = Math.min(Math.max((progressPercentage - 60) / 20, 0), 1);
 
   return (
@@ -122,10 +115,8 @@ export default function Home() {
         </main>
       </div>
 
-      {/* Content Section (below the hero) */}
       <section className="relative bg-[#FFF8D2] min-h-screen py-20 px-[240px] mt-400">
         <div className="grid grid-cols-2 gap-16 items-center mt-10">
-          {/* Left Column - Text Content */}
           <div className="">
             <h2 className="text-5xl font-[family-name:var(--font-pally-bold)] text-[#FF6B6B] mb-8">
               Bright, Bold, and Flavorful
@@ -148,31 +139,24 @@ export default function Home() {
             </button>
           </div>
           
-          {/* Right Column - Food Images with Clouds */}
           <div className="relative">
-            {/* Main large circle with food image */}
             <div className="relative rounded-full overflow-hidden border-3 border-[#FF9F1C] w-[600px] h-[600px] mx-auto">
               <div className="w-full h-full bg-[#FFC540] flex items-center justify-center">
-                {/* Placeholder for first food image */}
                 <div className="text-center text-gray-600">
                   <img src="/eggsBenny.jpg" alt="Eggs Benedict" className="w-full h-auto" />
                 </div>
               </div>
               
-              {/* Cloud decoration */}
             </div>
             
-            {/* Small circle with second food image */}
             <div className="absolute bottom-[-60px] left-80 rounded-full overflow-hidden border-3 border-[#FF9F1C] w-[300px] h-[300px]">
               <div className="w-full h-full bg-[#FFC540] flex items-center justify-center">
-                {/* Placeholder for second food image */}
                 <div className="text-center text-gray-600">
                   <img src="/steak-and-eggs.jpg" alt="Steak and Eggs" className="w-full h-auto" />
                 </div>
               </div>
             </div>
             
-            {/* Cloud decoration */}
             <img 
               src="/cloud3.svg" 
               alt="Cloud" 
@@ -205,7 +189,6 @@ export default function Home() {
       />
 
       <section className="relative bg-[#EB6862] bg-[url('/pans.svg')] min-h-screen py-20 px-[240px] flex flex-col items-center justify-center">
-        {/* Sun behind the happy hour call-out */}
         <div
           className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full blur-2xl"
           style={{
@@ -216,7 +199,6 @@ export default function Home() {
           }}
         ></div>
 
-        {/* Content container (placed above the sun) */}
         <div className="relative z-10 rounded-full w-[700px] h-[700px] bg-white flex flex-col items-center justify-center mx-auto p-14 text-center">
           <h1 className="font-[family-name:var(--font-pally-bold)] text-[#EA6764] text-6xl mb-4">Happy Hour,</h1>
           <h2 className="font-[family-name:var(--font-pally-bold)] text-[#FFA726] text-5xl mb-8">Sunnier than Ever!</h2>
@@ -252,7 +234,6 @@ export default function Home() {
 
       <MenuSections />
 
-      {/* Footer or other sections */}
       <footer className="bg-[#52B4D9] text-white py-10 px-[240px] text-center">
         <p>© 2025 Sunnys. All rights reserved.</p>
       </footer>
