@@ -4,6 +4,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import localFont from "next/font/local";
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 import ParallaxFoodGallery from "@/components/parralax-scrolling-cards";
+import MenuSections from "@/components/menu-sections";
 
 const pallyBold = localFont({
   src: "../public/fonts/Pally-Bold.otf",
@@ -248,6 +249,8 @@ export default function Home() {
       </section>
 
       <ParallaxFoodGallery />
+
+      <MenuSections />
 
       {/* Footer or other sections */}
       <footer className="bg-[#52B4D9] text-white py-10 px-[240px] text-center">
